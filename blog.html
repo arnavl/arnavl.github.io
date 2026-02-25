@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Arnav Loonker</title>
+  <meta name="description" content="Thoughts on building at scale, AI experiments, and lessons learned." />
+  <link rel="icon" href="data:," />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    ::selection { background: rgba(15, 23, 42, 0.25); }
+    .card-hover { transition: box-shadow 0.2s ease, transform 0.2s ease; }
+    .card-hover:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-1px); }
+  </style>
+</head>
+<body class="bg-white text-slate-900 font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="text-xl font-bold tracking-tight text-slate-900">Arnav Loonker</span>
+        <span class="hidden sm:inline-block h-5 w-px bg-slate-300"></span>
+        <span class="hidden sm:inline-block text-xs font-medium uppercase tracking-widest text-slate-400">Blog</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm text-slate-700 md:flex">
+        <a class="hover:text-slate-900" href="index.html">Home</a>
+        <a class="hover:text-slate-900" href="https://www.linkedin.com/in/arnav-loonker/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-slate-100" aria-label="Toggle menu">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="hidden border-t border-slate-200 px-4 py-3 md:hidden">
+      <div class="flex flex-col gap-3 text-sm text-slate-700">
+        <a class="hover:text-slate-900" href="index.html">Home</a>
+        <a class="hover:text-slate-900" href="https://www.linkedin.com/in/arnav-loonker/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="mx-auto max-w-4xl px-4 py-8">
+    <h1 class="text-2xl font-bold tracking-tight text-slate-900">All Posts</h1>
+    <p class="mt-1 text-sm text-slate-500">Thoughts on building at scale, AI experiments, and lessons learned along the way.</p>
+
+    <div class="mt-6 space-y-4">
+
+      <!-- Post: I Taught My IDE to Think Like My Team -->
+      <a href="posts/copilot-agents-setup.html" class="block">
+        <article class="rounded-xl border border-slate-200 bg-slate-50 p-5 card-hover">
+          <div class="flex items-center gap-2 text-[10px] font-medium text-slate-400 uppercase tracking-wider">
+            <svg class="h-3.5 w-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            AI & Automation
+            <span class="text-slate-300">&middot;</span>
+            <time>Feb 2026</time>
+          </div>
+          <h2 class="mt-2 text-base font-semibold text-slate-900">I Taught My IDE to Think Like My Team</h2>
+          <p class="mt-1 text-sm leading-relaxed text-slate-600">How a Saturday side experiment became PM-Assist &mdash; a multi-agent reasoning system that saves a full working day every week. The thinking pattern, the architecture, the honest caveats, and why this works for any domain.</p>
+          <div class="mt-2 flex flex-wrap gap-1.5">
+            <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">PM-Assist</span>
+            <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">AI Agents</span>
+            <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">Productivity</span>
+          </div>
+        </article>
+      </a>
+
+      <!--
+      ==========================================
+      TEMPLATE — Copy this block to add a new post
+      ==========================================
+
+      <article class="rounded-xl border border-slate-200 bg-slate-50 p-5 card-hover">
+        <div class="flex items-center gap-2 text-[10px] font-medium text-slate-400 uppercase tracking-wider">
+          <svg class="h-3.5 w-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          CATEGORY
+          <span class="text-slate-300">&middot;</span>
+          <time>Month YYYY</time>
+        </div>
+        <h2 class="mt-2 text-base font-semibold text-slate-900">Post Title Here</h2>
+        <p class="mt-1 text-sm leading-relaxed text-slate-600">A short description of the post.</p>
+        <div class="mt-2 flex flex-wrap gap-1.5">
+          <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">Tag 1</span>
+          <span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700">Tag 2</span>
+        </div>
+      </article>
+
+      ==========================================
+      -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-6 text-center text-xs text-slate-400">
+    <div class="mx-auto max-w-4xl px-4 flex items-center justify-center gap-3">
+      &copy; 2025 Arnav Loonker
+      <a href="https://www.linkedin.com/in/arnav-loonker/" target="_blank" rel="noopener" class="hover:text-slate-600">
+        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    toggle?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
